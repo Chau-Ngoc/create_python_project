@@ -1,0 +1,139 @@
+[
+  {
+    "dependencies": [],
+    "installed_version": "6.0.1",
+    "key": "isort",
+    "package_name": "isort",
+    "required_version": "6.0.1"
+  },
+  {
+    "dependencies": [
+      {
+        "dependencies": [],
+        "installed_version": "3.0.2",
+        "key": "markupsafe",
+        "package_name": "MarkupSafe",
+        "required_version": ">=2.0"
+      }
+    ],
+    "installed_version": "3.1.6",
+    "key": "jinja2",
+    "package_name": "Jinja2",
+    "required_version": "3.1.6"
+  },
+  {
+    "dependencies": [
+      {
+        "dependencies": [],
+        "installed_version": "3.4.0",
+        "key": "cfgv",
+        "package_name": "cfgv",
+        "required_version": ">=2.0.0"
+      },
+      {
+        "dependencies": [],
+        "installed_version": "2.6.9",
+        "key": "identify",
+        "package_name": "identify",
+        "required_version": ">=1.0.0"
+      },
+      {
+        "dependencies": [],
+        "installed_version": "1.9.1",
+        "key": "nodeenv",
+        "package_name": "nodeenv",
+        "required_version": ">=0.11.1"
+      },
+      {
+        "dependencies": [],
+        "installed_version": "6.0.2",
+        "key": "pyyaml",
+        "package_name": "PyYAML",
+        "required_version": ">=5.1"
+      },
+      {
+        "dependencies": [
+          {
+            "dependencies": [],
+            "installed_version": "0.3.9",
+            "key": "distlib",
+            "package_name": "distlib",
+            "required_version": ">=0.3.7,<1"
+          },
+          {
+            "dependencies": [],
+            "installed_version": "3.18.0",
+            "key": "filelock",
+            "package_name": "filelock",
+            "required_version": ">=3.12.2,<4"
+          },
+          {
+            "dependencies": [],
+            "installed_version": "4.3.7",
+            "key": "platformdirs",
+            "package_name": "platformdirs",
+            "required_version": ">=3.9.1,<5"
+          }
+        ],
+        "installed_version": "20.29.3",
+        "key": "virtualenv",
+        "package_name": "virtualenv",
+        "required_version": ">=20.10.0"
+      }
+    ],
+    "installed_version": "4.2.0",
+    "key": "pre-commit",
+    "package_name": "pre_commit",
+    "required_version": "4.2.0"
+  },
+  {
+    "dependencies": [
+      {
+        "dependencies": [],
+        "installed_version": "1.2.2",
+        "key": "exceptiongroup",
+        "package_name": "exceptiongroup",
+        "required_version": ">=1.0.0rc8"
+      },
+      {
+        "dependencies": [],
+        "installed_version": "2.1.0",
+        "key": "iniconfig",
+        "package_name": "iniconfig",
+        "required_version": "Any"
+      },
+      {
+        "dependencies": [],
+        "installed_version": "24.2",
+        "key": "packaging",
+        "package_name": "packaging",
+        "required_version": "Any"
+      },
+      {
+        "dependencies": [],
+        "installed_version": "1.5.0",
+        "key": "pluggy",
+        "package_name": "pluggy",
+        "required_version": ">=1.5,<2"
+      },
+      {
+        "dependencies": [],
+        "installed_version": "2.2.1",
+        "key": "tomli",
+        "package_name": "tomli",
+        "required_version": ">=1"
+      }
+    ],
+    "installed_version": "8.3.5",
+    "key": "pytest",
+    "package_name": "pytest",
+    "required_version": "8.3.5"
+  },
+  {
+    "dependencies": [],
+    "installed_version": "0.11.2",
+    "key": "ruff",
+    "package_name": "ruff",
+    "required_version": "0.11.2"
+  }
+]

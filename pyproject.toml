@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "create_python_project"
+version = "2025.0.0"
+authors = [
+    {name = "Le Ngoc Chau", email = "playerzawesome@gmail.com"},
+]
+description = "Use this project to create a starter template for your next Python project."
+readme = "README.md"
+
+[tool.ruff]
+line-length = 119
+
+[tool.isort]
+line_length = 119
