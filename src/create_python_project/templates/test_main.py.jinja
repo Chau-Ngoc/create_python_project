@@ -1,0 +1,5 @@
+from src.{{ package_dir }}.main import greet
+
+def test_greet(monkeypatch):
+    monkeypatch.setattr('builtins', 'print', 'Hello {{author_name}}')
+    assert greet('{{author_name}}') == 'Hello {{author_name}}'

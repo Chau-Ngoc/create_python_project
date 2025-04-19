@@ -1,3 +1,10 @@
+# Command line signature
+```bash
+create-python-project [OPTIONS] [DIR]
+```
+If `DIR` is not provided, a new directory will be created and named `project_name`,
+else `DIR` will be used as the project root directory.
+
 # Template project structure
 
 ```
@@ -7,8 +14,10 @@ project_root
     .pre-commit-config.yaml
     .gitignore
     src
-        main.py
+        project_name
+            main.py
     tests
-        test_main.py
+        project_name
+            test_main.py
     pyproject.toml
 ```

@@ -10,6 +10,22 @@ authors = [
 ]
 description = "Use this project to create a starter template for your next Python project."
 readme = "README.md"
+dependencies = [
+    "click==8.1.8",
+    "jinja2==3.1.6",
+]
+[project.optional-dependencies]
+dev = ["pytest", "pre-commit"]
+
+[project.scripts]
+create-python-project = "create_python_project.main:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["create_python_project"]
+
+[tool.setuptools.package-data]
+"create_python_project.templates" = ["*"]
 
 [tool.ruff]
 line-length = 119
