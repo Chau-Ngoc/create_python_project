@@ -1,4 +1,4 @@
-from src.{{ package_dir }}.main import greet
+from {{ package_dir }}.main import greet
 
 def test_greet(monkeypatch):
     monkeypatch.setattr('builtins', 'print', 'Hello {{author_name}}')
