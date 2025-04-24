@@ -14,8 +14,6 @@ dependencies = [
     "click==8.1.8",
     "jinja2==3.1.6",
 ]
-[project.optional-dependencies]
-dev = ["pytest", "pre-commit"]
 
 [project.scripts]
 create-python-project = "create_python_project.main:cli"

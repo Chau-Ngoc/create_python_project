@@ -28,8 +28,17 @@ def render(renderer, template: str, fn: str | os.PathLike, **kwargs) -> None:
         f.write(res)
 
 
+def create_default_project_path(ctx, param, value):
+    if value is None:
+        return Path.cwd()
+    else:
+        return value
+
+
 @click.command()
-@click.argument("dest", default=".", type=click.Path(exists=True, file_okay=False))
+@click.argument(
+    "dest", required=False, type=click.Path(exists=True, file_okay=False), callback=create_default_project_path
+)
 @click.option("--author_name", help="The name of the author", prompt="Name of the project's author")
 @click.option("--author_email", help="The email of the author", prompt="Email of the project's author")
 @click.option(
@@ -45,29 +54,25 @@ def render(renderer, template: str, fn: str | os.PathLike, **kwargs) -> None:
     prompt="Project version",
 )
 def cli(author_name, author_email, project_name, project_version, dest):
+    click.echo(f"{dest = }")
     project_name = re.sub(r"\s+", "_", project_name)
 
-    if dest == ".":
-        dest = (Path.cwd() / project_name).resolve()
+    if dest == Path.cwd():
+        dest = (dest / project_name).resolve()
         dest.mkdir(exist_ok=False)
     else:
         dest = Path(dest).resolve()
 
     try:
-        paths = ["src", "tests"]
-        templates = ["main.py.jinja", "test_main.py.jinja"]
-        file_names = ["main.py", "test_main.py"]
-
-        for i, path in enumerate(paths):
-            main_path = dest / path / project_name
-            main_path.mkdir(parents=True)
-            render(
-                tpl_renderer,
-                templates[i],
-                main_path / file_names[i],
-                author_name=author_name,
-                package_dir=project_name,
-            )
+        main_path = dest / "src" / project_name
+        main_path.mkdir(parents=True)
+        render(
+            tpl_renderer,
+            "main.py.jinja",
+            main_path / "main.py",
+            author_name=author_name,
+            package_dir=project_name,
+        )
 
         render(
             tpl_renderer,
