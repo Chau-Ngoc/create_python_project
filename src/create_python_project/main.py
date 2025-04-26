@@ -54,7 +54,10 @@ def create_default_project_path(ctx, param, value):
     prompt="Project version",
 )
 def cli(author_name, author_email, project_name, project_version, dest):
-    click.echo(f"{dest = }")
+    """Create a new Python project in DEST
+
+    DEST is the destination directory. If not specified, a new directory named PROJECT_NAME will be created in the
+    current directory, and the project will be created in it. Else, the project will be created in DEST."""
     project_name = re.sub(r"\s+", "_", project_name)
 
     if dest == Path.cwd():
