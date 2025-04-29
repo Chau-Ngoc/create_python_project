@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 create-python-project = {extras = ["dev"], file = ".", editable = true}
+build = "*"
 
 [dev-packages]
 pytest = "*"
