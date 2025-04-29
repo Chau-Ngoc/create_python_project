@@ -15,38 +15,47 @@ def test_create_default_project_path(value, expected):
 
 
 @pytest.mark.parametrize(
-    "args",
+    "args, project_root_dir",
     [
-        [
-            "--author_name",
-            "Chau",
-            "--author_email",
-            "mail.com",
-            "--project_name",
+        (
+            [
+                "--author_name",
+                "Chau",
+                "--author_email",
+                "mail.com",
+                "--project_name",
+                "test_project",
+                "--project_version",
+                "0.1.0",
+            ],
             "test_project",
-            "--project_version",
-            "0.1.0",
-        ],
-        [
-            "--author_name",
-            "Chau",
-            "--author_email",
-            "mail.com",
-            "--project_name",
-            "test_project",
-            "--project_version",
-            "0.1.0",
+        ),
+        (
+            [
+                "--author_name",
+                "Chau",
+                "--author_email",
+                "mail.com",
+                "--project_name",
+                "test_project",
+                "--project_version",
+                "0.1.0",
+                ".",
+            ],
             ".",
-        ],
+        ),
     ],
 )
-def test_cli(tmp_path_factory, args):
+def test_cli(tmp_path_factory, args, project_root_dir):
     tmp_project_root = tmp_path_factory.mktemp("project_root")
     runner = CliRunner()
     with runner.isolated_filesystem(temp_dir=tmp_project_root):
         result = runner.invoke(cli, args)
         assert result.exit_code == 0
-        assert "New project is created" in result.output
+        assert (
+            f'New project is created in "{sorted(tmp_project_root.glob("**/src"))[0].parent.resolve()}"'
+            in result.output
+        )
 
 
 @pytest.mark.parametrize(

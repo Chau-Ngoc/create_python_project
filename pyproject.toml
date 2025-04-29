@@ -38,4 +38,5 @@ addopts = [
     "--cov-report=html",
     "--cov-config=pyproject.toml",
     "--cov-fail-under=99",
+    "--basetemp=tests/tmp_project",
 ]
