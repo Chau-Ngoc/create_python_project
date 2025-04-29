@@ -75,5 +75,6 @@ def cli(author_name, author_email, project_name, project_version, dest):
 
     except (TemplateNotFound, FileExistsError) as e:
         click.secho(e, err=True, fg="red")
+        click.get_current_context().exit(111)
 
     click.secho(f'New project is created in "{dest}"', fg="green")
