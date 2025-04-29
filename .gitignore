@@ -142,7 +142,6 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-tests/tmp_project
 
 # Translations
 *.mo
