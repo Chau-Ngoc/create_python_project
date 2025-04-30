@@ -4,8 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-create-python-project = {extras = ["dev"], file = ".", editable = true}
 build = "*"
+create-python-project = {file = ".", editable = true}
 
 [dev-packages]
 pytest = "*"

@@ -20,10 +20,9 @@ create-python-project = "create_python_project.main:cli"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["create_python_project"]
 
 [tool.setuptools.package-data]
-"create_python_project.templates" = ["*"]
+"create_python_project.templates" = ["*.jinja", ".*.jinja"]
 
 [tool.ruff]
 line-length = 119

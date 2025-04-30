@@ -1,7 +1,7 @@
 {
   "_meta": {
     "hash": {
-      "sha256": "36f0c49714be6f0a2bcb77546293dc0d2aebd36228b80cb8897fb1c371f76f72"
+      "sha256": "365c1d2ba5f012c8df01a3ceeae9b9f69e12b2d3118bfb0a3c9c2d0f7a49d175"
     },
     "pipfile-spec": 6,
     "requires": {
@@ -35,9 +35,6 @@
     },
     "create-python-project": {
       "editable": true,
-      "extras": [
-        "dev"
-      ],
       "file": "."
     },
     "jinja2": {
