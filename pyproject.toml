@@ -20,6 +20,7 @@ create-python-project = "create_python_project.main:cli"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+include = ["create_python_project*"]
 
 [tool.setuptools.package-data]
 "create_python_project.templates" = ["*.jinja", ".*.jinja"]
@@ -29,12 +30,3 @@ line-length = 119
 
 [tool.isort]
 line_length = 119
-
-[tool.pytest.ini_options]
-addopts = [
-    "--import-mode=importlib",
-    "--cov=create_python_project",
-    "--cov-report=html",
-    "--cov-config=pyproject.toml",
-    "--cov-fail-under=99",
-]
